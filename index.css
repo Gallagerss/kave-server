@@ -1,0 +1,77 @@
+/* Tambahkan/Perbarui isi src/index.css dengan ini */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #FDFBF7; /* Krem hangat */
+  --fg: #1A120B; /* Cokelat tua */
+  --muted: #8F7A66; /* Cokelat kelabu */
+  --accent: #2D4A3E; /* Hijau hutan */
+  --gold: #C9A962; /* Aksen emas */
+  --card: #FFFFFF;
+  --border: #E8DFD3;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+}
+
+/* Efek Tombol Interaktif */
+.btn-earthy {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 15px rgba(45, 74, 62, 0.2);
+}
+
+.btn-earthy:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(45, 74, 62, 0.35);
+}
+
+.btn-earthy:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 2px 10px rgba(45, 74, 62, 0.2);
+}
+
+/* Efek Kartu Melayang */
+.hover-lift {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(26, 18, 11, 0.1);
+}
+
+/* Animasi Masuk */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeSlideUp 0.8s ease-out forwards;
+}
+
+/* Delay untuk stagger effect */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #FDFBF7; }
+::-webkit-scrollbar-thumb { background: #C9A962; border-radius: 10px; }
+
+/* Glassmorphism untuk Navbar */
+.glass-nav {
+  background: rgba(253, 251, 247, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(232, 223, 211, 0.6);
+}
